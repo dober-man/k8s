@@ -13,7 +13,7 @@ spec:
         app: JuiceShop
     spec:
       containers:
-      - name: bkimminich
-        image: juice-shop
+      - name: OWASP JuiceShop
+        image: bkimminich/juice-shop
         ports:
         - containerPort: 80
