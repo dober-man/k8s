@@ -10,7 +10,7 @@ spec:
   - 192.168.0.10
   selector:
     # Will deliver external traffic to the pod holding each of our containers
-    app: test_pod
+    app: juiceshop
   ports:
     - name: sentiment
       protocol: TCP
