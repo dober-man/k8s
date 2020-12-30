@@ -7,7 +7,7 @@ spec:
   # LoadBalancer type to allow external access to multiple ports
   type: LoadBalancer
   externalIPs:
-  - 172.17.0.6
+  - 172.17.0.5
   selector:
     # Will deliver external traffic to the pod holding each of our containers
     app: juiceshop
