@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  # Name of our service
+  name: juiceshop-lb
+spec:
+  selector:
+    # Will deliver external traffic to the pod holding each of our containers
+    app: juiceshop
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
