@@ -5,6 +5,8 @@ metadata:
   name: juiceshop-lb
 spec:
   type: NodePort
+  externalIPs:
+  - 40.76.114.91
   selector:
     # Will deliver external traffic to the pod holding each of our containers
     app: juiceshop
