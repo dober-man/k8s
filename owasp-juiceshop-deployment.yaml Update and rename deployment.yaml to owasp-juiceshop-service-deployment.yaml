@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  # Name of our service
+  name: juiceshop-lb
+spec:
+  # LoadBalancer type to allow external access to multiple ports
+  type: LoadBalancer
+  selector:
+    # Will deliver external traffic to the pod holding each of our containers
+    app: test_pod
+  ports:
+    - name: sentiment
+      protocol: TCP
+      port: 80
+      targetPort: containerport
