@@ -16,4 +16,4 @@ spec:
       - name: juice-shop
         image: bkimminich/juice-shop
         ports:
-        - containerPort: 80
+        - containerPort: 3000
