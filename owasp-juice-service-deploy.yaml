@@ -3,7 +3,7 @@ kind: Service
 apiVersion: v1
 metadata:
   # Name of our service
-  name: juiceshop-lb
+  name: juiceshop-service
 spec:
   type: NodePort
   externalIPs:
