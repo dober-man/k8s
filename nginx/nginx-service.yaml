@@ -8,11 +8,11 @@ spec:
   type: NodePort
   externalIPs:
   #Azure NIC IP
-  - 172.17.0.5
+  - 172.17.0.6
   selector:
     # Will deliver external traffic to the pod holding each of our containers
     app: nginx-web
   ports:
     - protocol: TCP
-      port: 81
+      port: 80
       targetPort: 80
