@@ -1,1 +1,18 @@
 
+kind: Service
+apiVersion: v1
+metadata:
+  # Name of our service
+  name: nginx-service
+spec:
+  type: NodePort
+  externalIPs:
+  #Azure NIC IP
+  - 172.17.0.5
+  selector:
+    # Will deliver external traffic to the pod holding each of our containers
+    app: nginx-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
