@@ -1,0 +1,18 @@
+#kubectl expose deployment juiceshop  --type=NodePort --port=80 --target-port=3000 --external-ip=172.17.0.5
+kind: Service
+apiVersion: v1
+metadata:
+  # Name of our service
+  name: juiceshop-service
+spec:
+  type: NodePort
+  externalIPs:
+  #Azure NIC IP
+  - 172.17.0.5
+  selector:
+    # Will deliver external traffic to the pod holding each of our containers
+    app: juiceshop
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000

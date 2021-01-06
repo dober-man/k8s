@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: juiceshop
+spec:
+  selector:
+    matchLabels:
+      app: juiceshop
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: juiceshop
+    spec:
+      containers:
+      - name: juice-shop
+        image: bkimminich/juice-shop
+        ports:
+        - containerPort: 3000
