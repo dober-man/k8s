@@ -1,19 +1,19 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: juiceshop
+  name: ngx-oss-app1
 spec:
   selector:
     matchLabels:
-      app: juiceshop
+      app: ngx-oss-app1
   replicas: 4
   template:
     metadata:
       labels:
-        app: juiceshop
+        app: ngx-oss-app1
     spec:
       containers:
-      - name: juice-shop
-        image: bkimminich/juice-shop
+      - name: ngx-oss-app1
+        image: thedoberman/ngx-oss-app1:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 80
