@@ -8,7 +8,7 @@ spec:
   type: NodePort
   externalIPs:
   #Azure NIC IP
-  - 10.1.1.3
+  - 10.1.1.6
   selector:
     # Will deliver external traffic to the pod holding each of our containers
     app: ngx-oss-app1
