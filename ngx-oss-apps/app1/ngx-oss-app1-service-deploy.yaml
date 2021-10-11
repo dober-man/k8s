@@ -7,7 +7,7 @@ metadata:
 spec:
   type: NodePort
   externalIPs:
-  #Azure NIC IP
+  #w1 nic ip
   - 10.1.1.6
   selector:
     # Will deliver external traffic to the pod holding each of our containers
